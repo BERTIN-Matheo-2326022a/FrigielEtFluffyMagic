@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "frigiel_et_fluffy_magic:item/plant_essence"
+  }
+}
