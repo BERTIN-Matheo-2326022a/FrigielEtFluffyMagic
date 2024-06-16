@@ -88,12 +88,6 @@ public class WaterEssenceItem extends Item {
     public void checkExtraContent(@Nullable Player pPlayer, Level pLevel, ItemStack pContainerStack, BlockPos pPos) {
     }
 
-    /** @deprecated */
-    @Deprecated
-    public boolean emptyContents(@Nullable Player pPlayer, Level pLevel, BlockPos pPos, @Nullable BlockHitResult pResult) {
-        return this.emptyContents(pPlayer, pLevel, pPos, pResult, (ItemStack)null);
-    }
-
     public boolean emptyContents(@Nullable Player p_150716_, Level p_150717_, BlockPos p_150718_, @Nullable BlockHitResult p_150719_, @Nullable ItemStack container) {
         Fluid var7 = this.content;
         if (!(var7 instanceof FlowingFluid flowingfluid)) {

@@ -64,12 +64,6 @@ public class PlantEssenceItem extends Item {
         }
     }
 
-    /** @deprecated */
-    @Deprecated
-    public static boolean growCrop(ItemStack pStack, Level pLevel, BlockPos pPos) {
-        return pLevel instanceof ServerLevel ? applyBonemeal(pStack, pLevel, pPos, (Player)null) : false;
-    }
-
     public static boolean applyBonemeal(ItemStack p_40628_, Level p_40629_, BlockPos p_40630_, Player player) {
         BlockState blockstate = p_40629_.getBlockState(p_40630_);
         int hook = ForgeEventFactory.onApplyBonemeal(player, p_40629_, p_40630_, blockstate, p_40628_);
