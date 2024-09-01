@@ -203,6 +203,7 @@ public class EarthEssenceItem extends Item {
             Blocks.LAPIS_BLOCK,
             Blocks.LAPIS_ORE,
             Blocks.LARGE_AMETHYST_BUD,
+            Blocks.LAVA_CAULDRON,
             Blocks.LIGHT_BLUE_CONCRETE,
             Blocks.LIGHT_BLUE_CONCRETE_POWDER,
             Blocks.LIGHT_BLUE_GLAZED_TERRACOTTA,
@@ -306,6 +307,7 @@ public class EarthEssenceItem extends Item {
             Blocks.POLISHED_TUFF_SLAB,
             Blocks.POLISHED_TUFF_STAIRS,
             Blocks.POLISHED_TUFF_WALL,
+            Blocks.POWDER_SNOW_CAULDRON,
             Blocks.PRISMARINE,
             Blocks.PRISMARINE_BRICK_SLAB,
             Blocks.PRISMARINE_BRICK_STAIRS,
@@ -398,6 +400,7 @@ public class EarthEssenceItem extends Item {
             Blocks.TUFF_STAIRS,
             Blocks.TUFF_WALL,
             Blocks.VERDANT_FROGLIGHT,
+            Blocks.WATER_CAULDRON,
             Blocks.WAXED_COPPER_BLOCK,
             Blocks.WAXED_CHISELED_COPPER,
             Blocks.WAXED_COPPER_BULB,
@@ -466,11 +469,8 @@ public class EarthEssenceItem extends Item {
                 level.destroyBlock(blockPos, true);
                 blockPos = blockPos.relative(pContext.getHorizontalDirection());
                 block = level.getBlockState(blockPos).getBlock();
-                res = true;
-                if (res) {
-                    itemstack.shrink(1);
-                    return InteractionResult.SUCCESS;
-                }
+                itemstack.shrink(1);
+                return InteractionResult.SUCCESS;
             }
 
         }
