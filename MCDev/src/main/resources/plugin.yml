@@ -1,0 +1,4 @@
+name: MCDev
+version: '${version}'
+main: org.navaha.mcdev.mcdev.MCDev
+api-version: '1.20'
